@@ -8,68 +8,98 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+
+
+  <script>
+  function startTime() {
+
+      document.getElementById('txt').innerHTML =new Date().toString("h:mm:ss tt");
+      var t = setTimeout(startTime, 500);
+  }
+
+
+      $(function(){
+        $("#nav").load("nav.html");
+        $("#head").load("header.html");
+        $("#footer").load("footer.html");
+      });
+      </script>
   <style media="screen">
   .container {
 background-color: #e0f2dc;
 }
   </style>
-  <body>
+  <body onload="startTime()">
 
-  <div class="jumbotron text-center">
-    <h1 >Md. Muktadirul Islam</h1>
+  <div id="head">
   </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-7">
-      <a href="index.html"><button>About Me!</button></a>
-    </div>
-    <div class="col-sm-5">
-      <a href="experience.html"><button>Experience</button></a>
-      <a href="skills.html"><button>Skills</button></a>
-      <a href="learning.html"><button>Learning</button></a>
-      <a href="programming.html"><button>Programming</button></a>
-      <a href="hobby.html"><button>Hobby</button></a>
-    </div>
-  </div>
-  </div>
+<div  id="nav"></div>
   <br>
   <br>
 
-  <br>
   <div class="container">
-      <table>
+    <table class="table table-striped" >
+<tr>
+  <th class="col-sm-2">Organization & Designation</th>
+  <th class="col-sm-2">Duration</th>
+  <th class="col-sm-8">Resposibilities</th>
+</tr>
+<tr>
+  <td>
+    <b><a href="https://ekkbaz.com/business">Ekkbaz</a>  Data Engineer</b>
+  </td>
+  <td>
+    <b>March 2018</b> to <b>September 2018</b>
+  </td>
+  <td>I have contributed to the Core Data Science team at Ekkbaz as a Data Engineer to building the data-driven business solution.
+    <ul>
+      <li><p>In Mongodb, there is no way to join with multiple collections so, I have to build Oploger for mlab databases with Flask this solved the multiple table join \& when any new data inserted in any collections that time the oploger will insert the data automatically in that specific collections.</p></li>
+      <li> <p>Previously one of there database was in Azure but having no backup system in azure database , as I was assigned to build a database backup system after specific time and implemented with python azure function and corn jobs.</p> </li>
+      <li> <p>Automate a system with selected user to send promotional SMS and mail using flask REST.</p> </li>
+      <li> <p>R\&D on recomendation system and prepared for Recommendation Engine for users product selection with Flask to push specific data from mLab to Redis server \& retrieve data using Flask.</p> </li>
+      <li> <p>Search Engine API for user to search products with elastic search and validating data from backend.</p> </li>
 
-        <ul>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
+    <b><a href="https://ekkbaz.com/business">Ekkbaz</a> <b>Data Engineer Intern</b>
+  </td>
+  <td>
+    <b>December 2017</b> to <b>February 2018</b>
+  </td>
+  <td>
+    <ul>
+      <li> I have to scraping data with scrapy, wrangling[jupyter notebook] and load data in mLab with desired format and check manually in mobile app.</li>
+      <li> Automate this task at the time of internship period with flask.</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
+    <b>Grader at <a href="http://uiu.ac.bd/"> United International University</a> </b>
+  </td>
+  <td>
+    <b> 2015 Oct to 2017 April [Part Time]</b>
+  </td>
+  <td>
+    <ul>
+    <li> Helping teacher with counting marks.</li>
+    <li> Manupulate Marks in Excel sheet. </li>
+    </li>
+    </ul>
+  </td>
+</tr>
+</table>
+<!-- </table>
+          <li>
 
-          <li><b><a href="https://ekkbaz.com/">Ekkbaz</a> [Data Engineer] [03/12/2017 to 11/09/2018]</b> <b>[FULL Time]</b></li>
-          <b>KPI with Python</b>
-          <ul>
-            <li> Total ETL(Extract, Transform, Load) process.</li>
-            <li> Promotional SMS & Mail script with python</li>
-            <li> Scrap data from web with desired format </li>
-            <li> Backup system for azure database</li>
-            <li> Oploger for mongodb.</li>
-            <li> Set date formetion in forcast api.</li>
-            <li> Building Recomendation Engine api for backend.</li>
-            <li> Building Search Engine api for backend.</li>
-          </ul>
-          <br>
-          <b>KPI for Testing</b>
-          <ul>
-            <li> Manuel Testing for app & finding bugs</li>
-            <li> Build automation in mongo to clear database and insert demo data</li>
-            <br>
-          </ul>
 
+      </table> -->
 
-          <li><b>Greader at <a href="http://uiu.ac.bd/"> United International University</a> 2015 Oct to 2017 April [Part Time]</b>
-              <ul>
-              <li> Helping teacher with counting marks.</li>
-              <li> Manupulate Marks in Excel sheet. </li>
-            </li>
-        </ul>
-
-      </table>
+        <div id="footer">
+        </div>
   </div>
 </body>
 </html>

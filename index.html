@@ -8,30 +8,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+
+
+  <script>
+  function startTime() {
+
+      document.getElementById('txt').innerHTML =new Date().toString("h:mm:ss tt");
+      var t = setTimeout(startTime, 500);
+  }
+
+
+      $(function(){
+        $("#nav").load("nav.html");
+        $("#head").load("header.html");
+        $("#footer").load("footer.html");
+      });
+      </script>
   <style media="screen">
   .container {
 background-color: #e0f2dc;
 }
   </style>
-  <body >
+  <body onload="startTime()">
 
-  <div class="jumbotron text-center">
-    <h1 >Md. Muktadirul Islam</h1>
+  <div id="head">
   </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-7">
-      <a href="index.html"><button>About Me!</button></a>
-    </div>
-    <div class="col-sm-5">
-      <a href="experience.html"><button>Experience</button></a>
-      <a href="skills.html"><button>Skills</button></a>
-      <a href="learning.html"><button>Learning</button></a>
-      <a href="programming.html"><button>Programming</button></a>
-      <a href="hobby.html"><button>Hobby</button></a>
-    </div>
-  </div>
-  </div>
+<div  id="nav"></div>
   <br>
   <br>
 
@@ -56,8 +58,8 @@ background-color: #e0f2dc;
         </p>
 
         <p>
-          I am interested in learning new algorithms, Problem solving techniques that brings effective changes on my working output & real. I do
-           belive that today performence was not best and I am not happy with what I have acchived today. However, I want to perform more better
+          I am interested in learning new algorithms, Problem solving techniques that brings effective changes on my working output & real life. I do
+           belive that today performence was not best and I am not happy with what I have acchived today. So, I want to perform more better
            than today.
         </p>
 
@@ -72,8 +74,10 @@ background-color: #e0f2dc;
     </div>
 
   </div>
-  <div class="container">
-    <div></div>
+
+  <div id="footer">
   </div>
+
+
   </body>
   </html>
