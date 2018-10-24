@@ -1,0 +1,17 @@
+<script>
+function startTime() {
+
+    document.getElementById('txt').innerHTML =new Date().toString("h:mm:ss tt");
+    var t = setTimeout(startTime, 500);
+}
+
+</script>
+</head>
+
+<body onload="startTime()">
+<div class="">
+
+</div>
+<div id="txt"></div>
+
+</body>
