@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Md. Muktadirul Islam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+  <script>
+  function startTime() {
+
+      document.getElementById('txt').innerHTML =new Date().toString("h:mm:ss tt");
+      var t = setTimeout(startTime, 500);
+  }
+
+
+      $(function(){
+        $("#nav").load("nav.html");
+        $("#head").load("header.html");
+        $("#footer").load("footer.html");
+      });
+      </script>
+  <style media="screen">
+  .container {
+background-color: #e0f2dc;
+}
+  </style>
+  <body onload="startTime()">
+
+  <div id="head">
+  </div>
+<div  id="nav"></div>
+  <br>
+  <br>
+
+  <br>
+
+  <div class="container">
+    <ul class="col-sm-offset-4 col-sm-8">
+      <h1></h1>
+      <li>BioInformetics</li>
+      <li>AI</li>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+      <li>Data Science</li>
+      <li>HCI</li>
+      <li>Deep Neural Network</li>
+
+
+      <h1></h1>
+    </ul>
+  </div>
+
+
+
+    <div id="footer">
+    </div>
+
+
+    </body>
+    </html>
